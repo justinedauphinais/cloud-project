@@ -1,10 +1,13 @@
 {
   "development": {
     "username": "postgres",
-    "password": "allo1234",
+    "password": "2001",
     "database": "projet_cloud",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false
+    }
   },
   "test": {
     "username": "root",
