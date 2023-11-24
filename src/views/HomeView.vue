@@ -19,7 +19,7 @@
         </section>
     </div>
 
-    <div><a href="/catalogue">View all recipes</a></div>
+    <div><router-link to="/catalogue">View all recipes</router-link></div>
   </main>
 </template>
 
