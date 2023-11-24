@@ -1,31 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Accueil</RouterLink>
-        <RouterLink to="/about">Catalogue</RouterLink>
+        <RouterLink to="/">
+          <img src="../public/home.png" />
+        </RouterLink>
+        <RouterLink to="/about">
+          <img src="../public/catalogue.png" />
+        </RouterLink>
       </nav>   
     </div>
   </header>
 
-  <div id="header">
-    <h1>Recettes simples et rapides</h1>
-    <p>
-      Bienvenue sur le meilleur site pour trouver la recette parfaite! 
-      Vous trouverez une grande sélection de recettes variées pour surprendre.
-    </p>
-  </div>
-
-  <div id="content">
-    <div>
-      
-    </div>
-  </div>
+  <RouterView />
 </template>
 
 <style scoped>
@@ -42,7 +33,23 @@ import HelloWorld from './components/HelloWorld.vue'
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1em;
     background-color: #2d2d2d;
+  }
+
+  nav a {
+    color: #00BD7E;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: -5px;
+  }
+
+  nav img {
+    width: 60px;
+  }
+
+  nav img:hover {
+    padding: 2.5px;
   }
 
   #header {
