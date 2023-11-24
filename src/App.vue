@@ -23,7 +23,7 @@ import { RouterLink, RouterView } from 'vue-router'
   * {
   }
 
-  nav {
+  header, nav {
     position: absolute;
     top: 0;
     left: 0;
