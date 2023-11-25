@@ -9,7 +9,7 @@ module.exports = {
       { nom: 'Difficile' },
     ];
 
-    await queryInterface.bulkInsert('allergie', difficultes, {});
+    await queryInterface.bulkInsert('difficulte', difficultes, {});
   },
 
   async down (queryInterface, Sequelize) {
