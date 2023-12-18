@@ -7,11 +7,8 @@ import ListItem from "@/components/ListItem.vue";
 
 import axios from 'axios';
 
-//const recipes = [];
 const recipes = reactive({
-  value: computed(() => {
-    return recipes.value;
-  })
+  value: []
 });
 
 onMounted(() => {

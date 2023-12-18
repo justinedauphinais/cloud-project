@@ -4,7 +4,9 @@ import {onMounted, defineProps, computed} from "vue";
 const recette = defineProps(['item']);
 
 const item = computed(() => {
-  return recette;
+  console.log(recette.item);
+  return recette.item;
+
 });
 
 console.log(recette.item);
