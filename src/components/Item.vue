@@ -6,7 +6,6 @@ const recette = defineProps(['item']);
 const item = computed(() => {
   console.log(recette.item);
   return recette.item;
-
 });
 
 console.log(recette.item);
