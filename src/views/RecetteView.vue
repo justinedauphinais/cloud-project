@@ -71,6 +71,10 @@
             <h2>Description</h2>
             <p>{{ recette.description }}</p>
         </div>
+
+        <div class="categorie_recette">
+            <h3>{{ recette.categorie_nom }}</h3>
+        </div>
                
         <!-- nom de la recette -->
         <h1>{{ recette.nom }}</h1>
@@ -135,6 +139,17 @@
         background-color: rgba(248, 248, 248, 1);
         border-radius: 5px;
         color: black;
+    }
+
+    #recette > .categorie_recette {
+        width: 360px;
+        height: fit-content;
+        position: absolute;
+        right: 40px;
+        top: 250px;
+        text-align: center;
+        font-size: 50px;
+        color: rgba(0, 189, 126, 1);
     }
 
     #recette .ingredient_recette {
