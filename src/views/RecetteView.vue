@@ -32,6 +32,10 @@
 
 <template>
     <main id="recette">
+
+        <!-- bouton retour -->
+        <input type="button" value="Retourner" onclick="history.back()">
+
         <!-- bannière de la recette -->
         <div>
             <span></span>
@@ -96,6 +100,17 @@
         left: 80px;
         display: flex;
         flex-direction: column;
+    }
+
+    #recette input {
+        width: fit-content;
+        position: absolute;
+        left: 2px;
+        top: 5px;
+        padding: 10px;
+        background-color: #FFCCCC;
+        border-radius: 5px;
+        cursor:pointer;
     }
 
     #recette div:first-of-type:not(.ingredient_recette) {
@@ -180,15 +195,16 @@
         font-size: 50px;
         font-weight: 600;
         margin: 0px auto;
-        color: #00BD7E;
+        color: #FFCCCC;
         text-align: center;
-        border-bottom: 1px solid #00BD7E;
+        border-bottom: 1px solid #FFCCCC;
     }
 
     #recette .instruction_recette {
-        width: 525px;
-        margin: 10px auto;
-        color: #00BD7E;
+        width: 800px;
+        position: relative;
+        left: 441.5px;
+        color: #FFCCCC;
     }
 
     #recette .instruction_recette li {
