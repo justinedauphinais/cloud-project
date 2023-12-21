@@ -39,6 +39,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     margin: 1em;
+    align-items: center;
   }
 
   .titreListe {

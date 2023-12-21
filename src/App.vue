@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">
           <img src="../public/home.png" />
         </RouterLink>
-        <RouterLink to="/about">
+        <RouterLink to="/catalogue">
           <img src="../public/catalogue.png" />
         </RouterLink>
       </nav>   

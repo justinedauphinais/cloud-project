@@ -27,6 +27,33 @@ function getRecipes() {
       });
 }
 
+const getRecettesFitrer = (nom,difficulte,categorie) => {
+  console.log(nom);
+  console.log(difficulte);
+  console.log(categorie);
+  if (nom == "" && difficulte == -1 && categorie == -1) {
+    getRecipes();
+  } else {
+
+    axios.post('http://localhost:3000/recipes/filter', {
+        nom: nom,
+        difficulte: difficulte,
+        categorie: categorie
+      })
+      .then(response => {
+
+        recipes.value = response.data;
+        console.log(recipes.value);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+
+
+}
+
 //todo ici mettre la logique pour les filtres
 
 
@@ -37,7 +64,7 @@ function getRecipes() {
 
 <template>
     <main id="catalogue">
-      <FiltreList />
+      <FiltreList @filtrerRecettes="getRecettesFitrer" />
       <ListItem :recipes="recipes" />
     </main>
 </template>
