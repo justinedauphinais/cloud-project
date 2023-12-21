@@ -1,4 +1,43 @@
 <script setup>
+  import { onMounted, computed, ref, reactive } from 'vue';
+  import HomeNew from "@/components/HomeNew.vue";
+
+  import axios from 'axios';
+
+  const recipes = reactive({
+    value: []
+  });
+
+  const categories = reactive({
+    value: []
+  });
+
+  onMounted(() => {
+    getRecipes();
+    getCategories();
+  });
+
+  function getRecipes() {
+    axios.get('http://localhost:3000/home')
+        .then(response => {
+
+          recipes.value = response.data;
+        })
+        .catch(error => {
+          console.log("error");
+        });
+  }
+
+  function getCategories() {
+    axios.get('http://localhost:3000/categories')
+        .then(response => {
+
+          categories.value = response.data;
+        })
+        .catch(error => {
+          console.log("error");
+        });
+  }
 </script>
 
 <template>
@@ -12,14 +51,12 @@
           </p>
         </section>
         <section>
-          <h2>Discover new recipes</h2>
-        </section>
-        <section>
-          <h2>Categories</h2>
+          <h2>Découvrir des nouvelles recettes</h2>
+          <HomeNew :recipes="recipes" />
         </section>
     </div>
 
-    <div><router-link to="/catalogue">View all recipes</router-link></div>
+    <div><router-link to="/catalogue">Voir tout</router-link></div>
   </main>
 </template>
 
@@ -58,8 +95,8 @@
   }
 
   #index div:nth-of-type(2) a {
-    padding: 1em 2em;
-    border-radius: 10px;
+    padding: 0.5em 4em;
+    border-radius: 25px;
     background-color: #599883;
     color: white;
   }

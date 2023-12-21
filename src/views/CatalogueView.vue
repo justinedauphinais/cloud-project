@@ -23,7 +23,7 @@ function getRecipes() {
         console.log(recipes.value);
       })
       .catch(error => {
-        console.log(error);
+        console.log("error");
       });
 }
 
