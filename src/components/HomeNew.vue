@@ -21,8 +21,6 @@ onMounted(() => {
 <template>
   <div class="liste">
     <HomeItem class="items" v-if="list.recipes" v-for="item in list.recipes.value" :item="item" />
-    <HomeItem class="items" v-if="list.recipes" v-for="item in list.recipes.value" :item="item" />
-    <HomeItem class="items" v-if="list.recipes" v-for="item in list.recipes.value" :item="item" />
   </div>
 </template>
 
